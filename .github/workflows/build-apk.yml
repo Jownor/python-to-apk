@@ -60,8 +60,8 @@ jobs:
     - name: Build APK
       run: buildozer android debug
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v2
+    - name: Upload APK (fallback action)
+      uses: dawidd6/action-upload-artifact@v2
       with:
         name: myapp-apk
         path: bin/*.apk
